@@ -67,8 +67,11 @@ nav.stuck { background: rgba(244,239,230,0.97); border-color: var(--parchment); 
 }
 .hero-pretitle {
   font-family: 'Oswald', sans-serif; font-size: 0.75rem; letter-spacing: 0.35em;
-  text-transform: uppercase; color: var(--bronze); margin-bottom: 1.5rem;
+  text-transform: uppercase; color: var(--ivory); margin-bottom: 1.5rem;
   opacity: 0; animation: aUp 0.7s 0.2s ease forwards;
+  background: rgba(26,21,16,0.45);
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
 }
 .hero-h1 {
   font-family: 'Cormorant Garamond', serif; font-weight: 700;
@@ -560,14 +563,14 @@ footer {
 
 <footer>
   <span class="footer-name">Guildford Gentleman's Ride</span>
-  <span class="footer-contact">contact us @ <a href="mailto:nigelf@guildforddgr.com">nigelf@guildforddgr.com</a></span>
+  <span class="footer-contact">contact us @ <a href="/cdn-cgi/l/email-protection#abc5c2cccec7cdebccdec2c7cfcdc4d9cfcfccd985c8c4c6"><span class="__cf_email__" data-cfemail="7d13141a18111b3d1a081411191b120f19191a0f531e1210">[email&#160;protected]</span></a></span>
   <div class="footer-social">
     <a href="https://www.instagram.com/guildfordsgentlemanriders" target="_blank">Instagram</a>
     <a href="https://www.facebook.com/" target="_blank">Facebook</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('stuck', scrollY > 50); }, { passive: true });
@@ -591,10 +594,4 @@ setInterval(tick, 1000);
 // Scroll reveal — with fallback for file:// or instant-load
 const revealEls = document.querySelectorAll('.r');
 const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); ro.unobserve(e.target); } });
-}, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
-revealEls.forEach(el => ro.observe(el));
-setTimeout(() => revealEls.forEach(el => el.classList.add('on')), 600);
-</script>
-</body>
-</html>
+  entries.forEach(e => { if (e.isIntersecting) { e.
