@@ -252,19 +252,9 @@ nav.stuck {
 }
 .wheel-svg {
   flex-shrink: 0;
-}
-.wheel-svg circle,
-.wheel-svg line,
-.wheel-svg path {
-  transform-box: fill-box;
+  animation: spin 6s linear infinite;
   transform-origin: center;
 }
-.rim-outer { animation: spin 4s linear infinite; }
-.rim-inner { animation: spin 4s linear infinite; }
-.spoke-group { animation: spin 4s linear infinite; }
-.w-right .rim-outer,
-.w-right .rim-inner,
-.w-right .spoke-group { animation-direction: normal; }
 
 .wheel-divider-text {
   text-align: center;
@@ -646,7 +636,7 @@ footer {
 
 <!-- NAV -->
 <nav id="nav">
-  <a class="nav-logo" href="#">GDR · Guildford</a>
+  <a class="nav-logo" href="#">DGR · Guildford</a>
   <ul class="nav-links">
     <li><a href="https://guildforddgr.com/">Home</a></li>
     <li><a href="https://guildforddgr.com/a-bit-more/">Why it's special</a></li>
@@ -731,8 +721,8 @@ footer {
     <circle cx="60" cy="60" r="7" fill="#8b5e2a"/>
     <circle cx="60" cy="60" r="4" fill="#f4efe6"/>
     <!-- Rim -->
-    <circle class="rim-outer" cx="60" cy="60" r="52" stroke="#3d4a2e" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
-    <circle class="rim-inner" cx="60" cy="60" r="45" stroke="#8b5e2a" stroke-width="1.5" fill="none"/>
+    <circle cx="60" cy="60" r="52" stroke="#3d4a2e" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+    <circle cx="60" cy="60" r="45" stroke="#8b5e2a" stroke-width="1.5" fill="none"/>
   </svg>
 
   <div class="wheel-divider-text r">
@@ -762,8 +752,8 @@ footer {
     </g>
     <circle cx="60" cy="60" r="7" fill="#8b5e2a"/>
     <circle cx="60" cy="60" r="4" fill="#f4efe6"/>
-    <circle class="rim-outer" cx="60" cy="60" r="52" stroke="#3d4a2e" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
-    <circle class="rim-inner" cx="60" cy="60" r="45" stroke="#8b5e2a" stroke-width="1.5" fill="none"/>
+    <circle cx="60" cy="60" r="52" stroke="#3d4a2e" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+    <circle cx="60" cy="60" r="45" stroke="#8b5e2a" stroke-width="1.5" fill="none"/>
   </svg>
 
 </div>
@@ -888,14 +878,14 @@ footer {
 <!-- FOOTER -->
 <footer>
   <span class="footer-name">Guildford Gentleman's Ride</span>
-  <span class="footer-contact">contact us @ <a href="mailto:nigelf@guildforddgr.com">nigelf@guildforddgr.com</a></span>
+  <span class="footer-contact">contact us @ <a href="/cdn-cgi/l/email-protection#fc92959b99909abc9b899590989a938e98989b8ed29f9391"><span class="__cf_email__" data-cfemail="6c02050b09000a2c0b190500080a031e08080b1e420f0301">[email&#160;protected]</span></a></span>
   <div class="footer-social">
     <a href="https://www.instagram.com/guildfordsgentlemanriders" target="_blank">Instagram</a>
     <a href="https://www.facebook.com/" target="_blank">Facebook</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('stuck', scrollY > 50); }, { passive: true });
@@ -926,10 +916,4 @@ tick();
 setInterval(tick, 1000);
 
 // Scroll reveal
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); ro.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.r').forEach(el => ro.observe(el));
-</script>
-</body>
-</html>
+const ro = new Inte
